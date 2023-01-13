@@ -1,0 +1,32 @@
+query GetAllPeople {
+  allPeople {
+    people  {
+      ...PersonFragment
+    }
+  }
+}
+
+fragment PersonFragment on Person {
+  id
+  name
+  homeworld {
+    name
+  }
+}
+
+
+
+query GetAllFilms {
+  allFilms {
+    films {
+      ...FilmFragment
+    }
+  }
+}
+
+fragment FilmFragment on Film {
+  id
+  title
+  director
+}
+
